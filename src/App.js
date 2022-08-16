@@ -1,12 +1,12 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import SelectClima from './components/SelectClima';
+import PanelClima from './components/PanelClima'
 
 function App() {
   return (
     <div className="App">
         <NavBar />
-        <SelectClima/>
+        <PanelClima />
     </div>
   );
 }
