@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import SelectClima from './SelectClima';
-import InformationClima from './InformationClima';
+import InformationWeather from './InformationWeather';
 
 const PanelClima = () => {
 
     let urlWeather = "https://api.openweathermap.org/data/2.5/weather?appid=69b34db4e81bcec6834b291c4a34f23b&lang=es"
-    let PathParamCity = "&q=";
+    let pathParamCity = "&q=";
+    let measurement = "&units=metric"
 
     let urlForecast = "https://api.openweathermap.org/data/2.5/forecast?appid=69b34db4e81bcec6834b291c4a34f23b&lang=es"
 
@@ -20,7 +21,7 @@ const PanelClima = () => {
        setLocation (city); //obtenemos la ciudad del select
 
        //weather
-       urlWeather = urlWeather + PathParamCity + city;
+       urlWeather = urlWeather + pathParamCity + city + measurement;
 
        await fetch(urlWeather).then((response) => {
         if (!response.ok) throw {response}
@@ -36,14 +37,14 @@ const PanelClima = () => {
        });
 
        //Forecast
-       urlForecast = urlForecast + PathParamCity + city;
+       urlForecast = urlForecast + pathParamCity + city + measurement;
 
        await fetch(urlForecast).then((response) => {
         if (!response.ok) throw {response}
         return response.json();
        }).then((forecastData) => {
         console.log(forecastData);
-        setWeather(forecastData);
+        setForecast(forecastData);
 
         //Si esta todo ok, muestro en pantalla
         setLoading(false);
@@ -62,7 +63,7 @@ const PanelClima = () => {
             <SelectClima 
                  newLocation = {getLocation}
             />
-            <InformationClima 
+            <InformationWeather 
                 showData = {show}
                 loadingData = {loading}
                 weather = {weather}

@@ -27,7 +27,7 @@ const SelectClima = ({newLocation}) => {
                         <option value="Tandil">Tandil</option>
                         <option value="Salta">Salta</option>
                     </select>
-                    <button className='btn btn-primary' type='submit'>Buscar</button>
+                    <button className="btn btn-secondary" type='submit'>Buscar</button>
                 </div>
             </form>
         </div>
