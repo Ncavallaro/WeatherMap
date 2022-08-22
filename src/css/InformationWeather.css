@@ -1,44 +1,42 @@
 .card {
-    max-width: 90%;
-}
-
-.col-md-4{
-    display: flex;
-    justify-content: center;
-    color: black;
-}
-
-.col-md-8{
-    display: flex;
-    align-items: center;
-}
-
-.card-title{
-    position: absolute;
-    padding-top: 2%;
-    font-size: 45px;
-}
-
-.card-temp{
-    position: absolute;
-    padding-top: 7%;
-    font-size: 55px
-}
-
-.card-description{
-    position: absolute;
-    padding-top: 13%;
-    font-size: 25px
-}
-
-.card-temp-max-min{
-    position: absolute;
-    padding-top: 200px;
-    font-size: 22px
+    max-width: 70%;
 }
 
 .card-body {
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+.textSinDatos {
+    background-color: #000000b5;
+    color: white;
+    display: inline;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+.card-title{
+    padding-top: 1%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.card-temp{
+    padding-top: 1%;
+    text-align: center;
+    font-size: 80px;
+}
+
+.card-description{
+    padding-top: 2%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.card-temp-max-min{
+    padding-top: 1%;
     font-size: 22px;
+    text-align: center;
 }
 
 #colDate{

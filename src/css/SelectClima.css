@@ -1,5 +1,5 @@
 .selectConteiner{
-    margin: 4%;
+    margin-top: 3%;
 }
 
 .conteinerForm{
@@ -8,4 +8,9 @@
 
 .btn{
     margin-left: 10px !important;
+    border-radius: 10px;
+}
+
+.form-select {
+    border-radius: 10px;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Spinner from "./Spinner";
 import '../css/InformationWeather.css';
 import WeekWeather from "./WeekWeather";
+import DayWeather from "./DayWeather";
 
 const InformationWeather = ({showData, loadingData, weather,forecast}) => {
 
@@ -35,17 +36,16 @@ const InformationWeather = ({showData, loadingData, weather,forecast}) => {
                     <div className="container">
                         <div className="card mb-3 mx-auto bg-dark text-light">
                             <div className="row g-0">
-                                <div className="col-md-4">
-                                    <h3 className="card-title">{weather.name}</h3>
-                                    <h1 className="card-temp">{(weather.main.temp).toFixed(1)}°C</h1>
-                                    <p className="card-description"><img src={iconUrl} /> {(weather.weather[0].description).charAt(0).toUpperCase() +
-                                    (weather.weather[0].description).slice(1)}</p>
-                                    <p className="card-temp-max-min">Máx.: {(weather.main.temp_max).toFixed(1)}° Mín.: {(weather.main.temp_min).toFixed(1)}°</p>
-                                    <img src="https://images.pexels.com/photos/356286/pexels-photo-356286.jpeg" 
-                                    className="img-fluid rounded-start" alt=".."/>
-                                </div>
-                                <div className="col-md-8">
-                                    <div className="card-body text-start mt-2">
+                                <div className="card-body text-start mt-2">
+                                        <DayWeather 
+                                            name = {weather.name}
+                                            temp = {weather.main.temp}
+                                            icon = {iconUrl}
+                                            description = {weather.weather[0].description}
+                                            temp_max = {weather.main.temp_max}
+                                            temp_min = {weather.main.temp_min}
+                                        />
+                                        <hr />
                                         <WeekWeather 
                                             dt_txt = {forecast.list[0].dt_txt}
                                             iconUrl = {iconUrl0}
@@ -81,13 +81,12 @@ const InformationWeather = ({showData, loadingData, weather,forecast}) => {
                                             temp_min = {forecast.list[31].main.temp_min}
                                             temp_max = {forecast.list[31].main.temp_max}
                                         />
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 ) : (
-                    <h2 className="text-light">Sin datos</h2>
+                    <h2 className="textSinDatos">Sin datos</h2>
                 )
             }
         </div>
