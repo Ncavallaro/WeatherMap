@@ -1,5 +1,6 @@
 .card {
     max-width: 70%;
+    border-radius:1rem
 }
 
 .card-body {
@@ -41,11 +42,11 @@
 
 #colDate{
     text-align: center;
-
 }
 
 .row{
     margin-bottom: 5px;
+    align-items: center;
 }
 
 

@@ -1,0 +1,33 @@
+.temperature-bar {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.bar {
+  flex: 1;
+  height: 8%;
+  margin: 0 10px;
+  background: linear-gradient(to right, #90caf9, #ef9a9a);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.min {
+  font-weight: bold;
+  color: white;
+  padding: 3%;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+}
+
+.max {
+  font-weight: bold;
+  color: white;
+  padding: 3%;
+  text-shadow: 0 0 10px rgb(251, 0, 0);
+}
