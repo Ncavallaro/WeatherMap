@@ -2,3 +2,10 @@
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 1000px) {
+    .navBar {
+        margin-top: 3%;
+    }
+}
