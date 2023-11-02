@@ -27,7 +27,7 @@ const PanelClima = () => {
       .then((response) => {
         if (!response.ok){
           throw new Error('Error al obtener los datos');
-        } 
+        }
         return response.json()
       })
       .then((weatherData) => {

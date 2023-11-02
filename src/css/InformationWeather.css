@@ -49,4 +49,25 @@
     align-items: center;
 }
 
-
+/* Estilos para pantallas pequeñas */
+@media (max-width: 1000px) {
+    .card {
+        max-width: 90%;
+    }
+    #colDescription{
+        display: none;
+    }
+    .bar {
+        padding-right: 10px;
+    }
+    #colDate{
+        text-align: left;
+        padding-right: 0px;
+        width: 100px !important;
+    }
+    #colIcon{
+        display: contents;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

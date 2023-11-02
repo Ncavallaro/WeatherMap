@@ -24,10 +24,6 @@ const WeekWeather = ({ dt_txt, iconUrl, description, temp_min, temp_max }) => {
   )
 }
 
-function formato(texto) {
-  return texto.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, '$3/$2/$1')
-}
-
 function obtenerDiaSemana(texto) {
   const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
